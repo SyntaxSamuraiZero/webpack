@@ -1,0 +1,9 @@
+.main {
+  background-color: $color-main;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    margin-left: 320px;
+    width: calc(100% - 320px);
+  }
+}

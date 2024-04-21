@@ -1,0 +1,19 @@
+@import '~normalize.css/normalize.css';
+
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/fonts';
+
+@import 'blocks/html/html';
+
+@import 'blocks/header/header';
+@import 'blocks/header/__elements/nav';
+
+@import 'blocks/main/main-content';
+@import 'blocks/main/__elements/menu';
+@import 'blocks/main/__elements/services';
+@import 'blocks/main/__elements/brands';
+@import 'blocks/main/__elements/technique';
+@import 'blocks/main/__elements/prices';
+
+@import 'blocks/footer/footer';

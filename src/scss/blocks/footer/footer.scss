@@ -1,0 +1,48 @@
+.footer {
+  font-family: $medium;
+  color: #7e7e82;
+  line-height: 16px;
+  text-align: center;
+  padding: 16px;
+  border-top: 1px solid #d9fff5;
+  background-color: #f8f8f8;
+
+  @media (min-width: $tablet) {
+    padding: 24px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px;
+    margin-left: 320px;
+    width: calc(100% - 320px);
+  }
+
+  &__copyright {
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      min-width: 250px;
+    }
+  }
+
+  &__policy {
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      min-width: 250px;
+    }
+  }
+
+  &__info {
+    @media (min-width: $tablet) {
+      text-align: right;
+      max-width: 300px;
+    }
+  }
+}

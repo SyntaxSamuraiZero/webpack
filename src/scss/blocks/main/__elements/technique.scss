@@ -1,0 +1,96 @@
+.technique {
+  overflow: hidden;
+  padding: 0 16px;
+
+  @media (min-width: $tablet) {
+    padding: 0 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 32px;
+  }
+
+  @include pagination;
+
+  &__title {
+    @include h2;
+  }
+
+  &__container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 240px;
+
+    @media (min-width: $tablet) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      width: auto;
+      height: 160px;
+      overflow: hidden;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 24px;
+      height: 161px;
+      z-index: 2;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &--active {
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet) {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 16px;
+      column-gap: 24px;
+    }
+  }
+
+  &__slide {
+    height: 160px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (min-width: $tablet) {
+      width: 240px;
+    }
+  }
+
+  &__slide-text {
+    margin-bottom: auto;
+    font-family: $medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2;
+  }
+
+  &__slide-btn {
+    @include slide-btn;
+  }
+
+  &__btn-read-more {
+    @include btn-read-more;
+  }
+}

@@ -1,0 +1,241 @@
+.services {
+  padding: 24px 16px;
+
+  @media (min-width: $tablet) {
+    padding: 24px 24px 32px 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 42px 32px;
+  }
+
+  &__flex-container {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: $bold;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    margin: 0 0 24px 0;
+    white-space: nowrap;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      box-sizing: content-box;
+      position: absolute;
+      left: -3px;
+      height: 32px;
+      border: 4px solid #41f6d7;
+      border-radius: 4px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: flex;
+      height: 40px;
+    }
+  }
+
+  &__button-repair,
+  &__button-checkstatus {
+    margin-left: 160px;
+  }
+
+  &__button-repair::before {
+    content: 'Оставить заявку';
+    position: absolute;
+    transform: translate(-84px);
+    white-space: nowrap;
+    padding-right: 12px;
+    font-family: 'TTLakesMedium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__button-checkstatus::before {
+    content: 'Статус ремонта';
+    position: absolute;
+    transform: translate(-81px);
+    white-space: nowrap;
+    padding-right: 12px;
+    font-family: 'TTLakesMedium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__slide-menu {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    list-style: none;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #7e7e82 #f8f8f8;
+    margin-right: -16px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      margin-right: -24px;
+      margin-bottom: 27px;
+    }
+
+    @media (min-width: $desktop) {
+      overflow: visible;
+      margin-right: 0;
+      padding: 0;
+      margin-bottom: 7px;
+      flex-wrap: wrap;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 40px;
+      width: 24px;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__slide-menu-button {
+    border: 2px solid transparent;
+    background-color: #f8f8f8;
+    white-space: nowrap;
+    padding: 8px 26px;
+    font-family: 'TTLakesMedium';
+    font-size: 16px;
+    line-height: 24px;
+    color: #7e7e82;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--active {
+      border: 2px solid #b8ffec;
+      background-color: white;
+      border-radius: 6px;
+
+      &:hover {
+        opacity: 1;
+        cursor: auto;
+      }
+    }
+  }
+
+  &__text-flex-container {
+    @media (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &__container-text {
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      height: 160px;
+      margin-right: 48px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 36px;
+      margin-top: 9.22px;
+    }
+
+    &--active {
+      height: auto;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 18px;
+    letter-spacing: 0.2px;
+
+    @media (min-width: $tablet) {
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn-read-more {
+    display: flex;
+    border: none;
+    background-color: #f8f8f8;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__btn-read-more-img {
+    box-sizing: content-box;
+    margin-right: 8px;
+    padding: 7px 8px 6px 8px;
+  }
+
+  &__btn-read-more-text {
+    font-family: 'TTLakesMedium';
+    color: #1b1c21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__img {
+    height: auto;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      height: 340px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    @media (min-width: $desktop) {
+      width: 530px;
+      height: 383px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.header {
+  background-color: $color-header;
+  padding: 18.59px 16px;
+  border-bottom: 1px solid $color-decor;
+
+  @media (min-width: $tablet) {
+    padding: 18.59px 24px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}

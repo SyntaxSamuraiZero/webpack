@@ -1,0 +1,93 @@
+@mixin h2 {
+  margin-right: -16px;
+  margin-left: -16px;
+  border-top: 1px solid #d9fff5;
+  padding: 16px;
+  background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
+  font-family: $regular;
+  color: #7e7e82;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  @media (min-width: $tablet) {
+    margin-right: -24px;
+    margin-left: -24px;
+    padding: 16px 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: -32px;
+    margin-left: -32px;
+    padding: 16px 32px;
+  }
+}
+
+@mixin pagination {
+  .swiper-pagination {
+    position: static;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #b5b6bc;
+    margin: 0 6px !important;
+  }
+}
+
+@mixin slide-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@mixin btn-read-more {
+  display: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 32px;
+    border: none;
+    background-color: #f8f8f8;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &-img {
+    box-sizing: content-box;
+    padding: 7px 8px 6px 8px;
+    margin-right: 8px;
+
+    &--active {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  &-text {
+    font-family: $medium;
+    color: #1b1c21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+}

@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+  font-family: $regular;
+  color: $text-color;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  user-select: none;
+}
+
+img {
+  display: block;
+}

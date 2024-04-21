@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  &__button {
+    border-radius: 50%;
+    border-color: #ff3e79;
+    background-color: #ff3e79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &--768 {
+      display: none;
+
+      @media (min-width: $tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  &__divider {
+    margin: 0 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 1px;
+    height: 32px;
+
+    &--768 {
+      display: none;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        margin: 0 4px;
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0 0.73px;
+    margin-right: auto;
+  }
+}
