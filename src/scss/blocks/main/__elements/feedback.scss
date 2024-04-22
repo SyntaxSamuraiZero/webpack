@@ -1,0 +1,77 @@
+.feedback {
+  position: fixed;
+  right: -320px;
+  transition: right 0.5s;
+  z-index: 2;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #7e7e82 white;
+  padding: 24px 16px;
+  width: 320px;
+  height: 100%;
+  background-color: #ffffff;
+
+  @media (min-width: $desktop) {
+    padding: 40px 32px;
+    width: 440px;
+    right: -440px;
+  }
+
+  &__button {
+    @include menu-btn;
+  }
+
+  &__title {
+    @include menu-title;
+  }
+
+  &__input {
+    @include menu-input;
+  }
+
+  &__textarea {
+    @include menu-input;
+    height: 118px;
+    resize: none;
+  }
+
+  &__policy {
+    font-family: $medium;
+    color: #7e7e82;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    color: #ff3e79;
+    text-decoration: none;
+  }
+
+  &__submit {
+    color: #ffffff;
+    font-family: $bold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    height: 32px;
+    width: 136px;
+    background-color: #ff3e79;
+    border: none;
+    border-radius: 16px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &--active {
+    box-shadow: 16px 0px 52px 0px #0e185033;
+    overflow: visible;
+    right: 0;
+  }
+}

@@ -42,15 +42,74 @@
   }
 }
 
+@mixin menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    left: -72px;
+    top: 36px;
+  }
+}
+
+@mixin menu-title {
+  position: relative;
+  font-family: $bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin-bottom: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -20px;
+    height: 40px;
+    border-right: 4px solid #41f6d7;
+    border-left: 4px solid transparent;
+    border-radius: 4px;
+
+    @media (min-width: $desktop) {
+      left: -36px;
+    }
+  }
+}
+
+@mixin menu-input {
+  display: block;
+  height: 48px;
+  width: 100%;
+  font-family: $medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
 @mixin slide-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
-  background-color: #ffffff;
+  flex-shrink: 0;
   border: 2px solid #ff3e79;
+  background-color: #ffffff;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 

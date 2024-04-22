@@ -35,9 +35,10 @@
       content: '';
       box-sizing: content-box;
       position: absolute;
-      left: -3px;
-      height: 32px;
-      border: 4px solid #41f6d7;
+      left: -4px;
+      height: 40px;
+      border-right: 4px solid #41f6d7;
+      border-left: 4px solid transparent;
       border-radius: 4px;
     }
   }
@@ -49,58 +50,63 @@
       display: flex;
       height: 40px;
     }
-  }
 
-  &__button-repair,
-  &__button-checkstatus {
-    margin-left: 160px;
-  }
+    &--repair {
+      margin-left: 160px;
 
-  &__button-repair::before {
-    content: 'Оставить заявку';
-    position: absolute;
-    transform: translate(-84px);
-    white-space: nowrap;
-    padding-right: 12px;
-    font-family: 'TTLakesMedium';
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
+      &::before {
+        content: 'Оставить заявку';
+        position: absolute;
+        transform: translate(-84px);
+        white-space: nowrap;
+        padding-right: 12px;
+        font-family: 'TTLakesMedium';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+      }
+    }
 
-  &__button-checkstatus::before {
-    content: 'Статус ремонта';
-    position: absolute;
-    transform: translate(-81px);
-    white-space: nowrap;
-    padding-right: 12px;
-    font-family: 'TTLakesMedium';
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
+    &--checkstatus {
+      margin-left: 160px;
+
+      &::before {
+        content: 'Статус ремонта';
+        position: absolute;
+        transform: translate(-81px);
+        white-space: nowrap;
+        padding-right: 12px;
+        font-family: 'TTLakesMedium';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+      }
+    }
   }
 
   &__slide-menu {
+    outline: 1px solid red;
     display: flex;
     align-items: center;
-    padding-bottom: 4px;
+    // padding-bottom: 4px;
     list-style: none;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #7e7e82 #f8f8f8;
+    height: auto;
     margin-right: -16px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet) {
       margin-right: -24px;
-      margin-bottom: 27px;
+      margin-bottom: 32px;
     }
 
     @media (min-width: $desktop) {
       overflow: visible;
       margin-right: 0;
       padding: 0;
-      margin-bottom: 7px;
+      // margin-bottom: 7px;
       flex-wrap: wrap;
     }
 
@@ -122,8 +128,10 @@
     }
   }
 
-  &__slide-menu-button {
+  &__slide-menu-link {
+    text-decoration: none;
     border: 2px solid transparent;
+    border-radius: 6px;
     background-color: #f8f8f8;
     white-space: nowrap;
     padding: 8px 26px;
@@ -134,18 +142,12 @@
     cursor: pointer;
 
     &:hover {
-      opacity: 0.5;
+      border: 2px solid #b8ffec;
+      background-color: #ffffff;
     }
 
-    &--active {
-      border: 2px solid #b8ffec;
-      background-color: white;
-      border-radius: 6px;
-
-      &:hover {
-        opacity: 1;
-        cursor: auto;
-      }
+    &:active {
+      opacity: 0.7;
     }
   }
 

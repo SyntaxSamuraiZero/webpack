@@ -3,9 +3,8 @@ import './blocks/button/button'
 
 let btnReadMore = document.querySelector('.services__btn-read-more')
 let text = document.querySelector('.services__container-text')
-let btnSlide = document.querySelectorAll('.services__slide-menu-button')
 let menu = document.querySelector('.menu')
-let btnBurger = document.querySelector('.button-burger')
+let btnBurger = document.querySelector('.nav__button--burger')
 let btnClose = menu.querySelector('.menu__button--close')
 
 btnReadMore.addEventListener('click', function () {
@@ -19,11 +18,32 @@ btnClose.addEventListener('click', function () {
   menu.classList.remove('menu--active')
 })
 
-btnSlide.forEach(function (button) {
-  button.addEventListener('click', function () {
-    btnSlide.forEach(function (btn) {
-      btn.classList.remove('services__slide-menu-button--active')
-    })
-    button.classList.add('services__slide-menu-button--active')
-  })
+let call = document.querySelector('.call')
+let menuBtnCall = document.querySelector('.menu__button--call')
+let headerBtnCall = document.querySelector('.nav__button--call')
+let btnCallClose = call.querySelector('.call__button--close')
+
+menuBtnCall.addEventListener('click', function () {
+  call.classList.toggle('call--active')
+})
+headerBtnCall.addEventListener('click', function () {
+  call.classList.toggle('call--active')
+})
+btnCallClose.addEventListener('click', function () {
+  call.classList.remove('call--active')
+})
+
+let feedback = document.querySelector('.feedback')
+let menuBtnFeedback = document.querySelector('.services__button--repair')
+let headerBtnFeedback = document.querySelector('.nav__button--repair')
+let btnFeedbackClose = feedback.querySelector('.feedback__button--close')
+
+menuBtnFeedback.addEventListener('click', function () {
+  feedback.classList.toggle('feedback--active')
+})
+headerBtnFeedback.addEventListener('click', function () {
+  feedback.classList.toggle('feedback--active')
+})
+btnFeedbackClose.addEventListener('click', function () {
+  feedback.classList.remove('feedback--active')
 })
