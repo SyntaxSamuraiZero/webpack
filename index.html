@@ -52,13 +52,13 @@
       </div>
       <div>
         <div class="menu__footer-container">
-          <button class="menu__button" type="button">
+          <button class="menu__button menu__button--call" type="button">
             <img src="img/call.svg" width="17.96" height="17.96" alt="button-call">
           </button>
-          <button class="menu__button" type="button">
+          <button class="menu__button menu__button--chat" type="button">
             <img src="img/chat.svg" width="20" height="20" alt="button-chat">
           </button>
-          <button class="menu__button" type="button">
+          <button class="menu__button menu__button--profile" type="button">
             <img src="img/profile.svg" width="20" height="18" alt="button-profile">
           </button>
         </div>
@@ -78,29 +78,68 @@
       </div>
     </aside>
 
+    <aside class="feedback">
+      <button class="feedback__button feedback__button--close" type="button">
+        <img src="img/close.svg" width="16" height="16" alt="button-close">
+      </button>
+      <h2 class="feedback__title">Обратная связь</h2>
+      <form action="#" method="post">
+        <input class="feedback__input feedback__input--username" name="username" type="text" required placeholder="Имя">
+        <input class="feedback__input feedback__input--usertel" name="usertel" type="tel" required placeholder="Телефон">
+        <input class="feedback__input feedback__input--useremail" name="useremail" type="email" required placeholder="Электронная почта">
+        <textarea class="feedback__textarea" name="usermessage" required placeholder="Сообщение"></textarea>
+        <p class="feedback__policy">Нажимая “отправить”, вы даете согласие на
+          <a class="feedback__link" href="#">обработку персональных данных</a> и
+          соглашаетесь с нашей
+          <a class="feedback__link" href="#">политикой конфиденциальности</a></p>
+        <button class="feedback__submit" type="submit">
+          <span>Отправить</span>
+          <img src="img/dropdown-white.svg" width="8" height="9.63" alt="dropdown">
+        </button>
+      </form>
+    </aside>
+
+    <aside class="call">
+      <button class="call__button call__button--close" type="button">
+        <img src="img/close.svg" width="16" height="16" alt="button-close">
+      </button>
+      <h2 class="call__title">Заказать звонок</h2>
+      <form action="#" method="post">
+        <input class="call__input call__input--usertel" name="usertel" type="tel" required placeholder="Телефон">
+        <p class="call__policy">Нажимая “отправить”, вы даете согласие на
+          <a class="call__link" href="#">обработку персональных данных</a> и
+          соглашаетесь с нашей
+          <a class="call__link" href="#">политикой конфиденциальности</a></p>
+        <button class="call__submit" type="submit">
+          <span>Отправить</span>
+          <img src="img/dropdown-white.svg" width="8" height="9.63" alt="dropdown">
+        </button>
+      </form>
+    </aside>
+
     <header class="header">
       <nav class="nav">
-        <button class="nav__button button-burger" type="button">
+        <button class="nav__button nav__button--burger" type="button">
           <img src="img/burger.svg" width="18" height="16" alt="button-burger">
         </button>
         <div class="nav__divider nav__divider--768"></div>
         <a class="nav__logo" href="index.html">
           <img src="img/logo.svg" width="96.55" height="50.81" alt="logo">
         </a>
-        <button class="nav__button nav__button--768" type="button">
+        <button class="nav__button nav__button--call nav__button--768" type="button">
           <img src="img/call.svg" width="17.96" height="17.96" alt="button-call">
         </button>
-        <button class="nav__button nav__button--768" type="button">
+        <button class="nav__button nav__button--chat nav__button--768" type="button">
           <img src="img/chat.svg" width="20" height="20" alt="button-chat">
         </button>
-        <button class="nav__button nav__button--768" type="button">
+        <button class="nav__button nav__button--profile nav__button--768" type="button">
           <img src="img/profile.svg" width="20" height="18" alt="button-profile">
         </button>
         <div class="nav__divider"></div>
-        <button class="nav__button" type="button">
+        <button class="nav__button nav__button--repair" type="button">
           <img src="img/repair.svg" width="20" height="20" alt="button-repair">
         </button>
-        <button class="nav__button" type="button">
+        <button class="nav__button nav__button--checkstatus" type="button">
           <img src="img/checkstatus.svg" width="16" height="20" alt="button-checkstatus">
         </button>
       </nav>
@@ -111,35 +150,35 @@
         <div class="services__flex-container">
           <h1 class="services__title">Услуги и сервисы</h1>
           <div class="services__button">
-            <button class="nav__button services__button-repair" type="button">
+            <button class="nav__button services__button--repair" type="button">
               <img src="img/repair.svg" width="20" height="20" alt="button-repair">
             </button>
-            <button class="nav__button services__button-checkstatus" type="button">
+            <button class="nav__button services__button--checkstatus" type="button">
               <img src="img/checkstatus.svg" width="16" height="20" alt="button-checkstatus">
             </button>
           </div>
         </div>
         <ul class="services__slide-menu">
           <li>
-            <button class="services__slide-menu-button">Ремонтируемые бренды</button>
+            <a class="services__slide-menu-link" href="#brands">Ремонтируемые бренды</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Ремонтируемые устройства</button>
+            <a class="services__slide-menu-link" href="#technique">Ремонтируемые устройства</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Дополнительные услуги</button>
+            <a class="services__slide-menu-link" href="#prices">Дополнительные услуги</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Цены на услуги</button>
+            <a class="services__slide-menu-link" href="#">Цены на услуги</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Адреса сервисных центров</button>
+            <a class="services__slide-menu-link" href="#">Адреса сервисных центров</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Специальные цены</button>
+            <a class="services__slide-menu-link" href="#">Специальные цены</a>
           </li>
           <li>
-            <button class="services__slide-menu-button">Отзывы</button>
+            <a class="services__slide-menu-link" href="#">Отзывы</a>
           </li>
         </ul>
         <div class="services__text-flex-container">
@@ -171,7 +210,7 @@
         </div>
       </section>
 
-      <section class="brands">
+      <section class="brands" id="brands">
         <h2 class="brands__title">Ремонт техники различных брендов</h2>
         <div class="swiper-container brands__container">
           <div class="swiper-wrapper brands__wrapper">
@@ -250,7 +289,7 @@
         </button>
       </section>
 
-      <section class="technique">
+      <section class="technique" id="technique">
         <h2 class="technique__title">Ремонт различных видов техники</h2>
         <div class="swiper-container technique__container">
           <div class="swiper-wrapper technique__wrapper">
@@ -287,7 +326,7 @@
         </button>
       </section>
 
-      <section class="prices">
+      <section class="prices" id="prices">
         <h2 class="prices__title">Ремонт различных видов техники</h2>
         <div class="swiper-container prices__container">
           <div class="swiper-wrapper prices__wrapper">
