@@ -10,7 +10,6 @@
   }
 
   &__flex-container {
-    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
   }
@@ -20,7 +19,8 @@
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
-    margin: 0 0 24px 0;
+    margin: 0;
+    margin-bottom: 24px;
     white-space: nowrap;
 
     @media (min-width: $tablet) {
@@ -28,7 +28,7 @@
     }
 
     @media (min-width: $desktop) {
-      margin: 0;
+      margin-bottom: 16px;
     }
 
     &::before {
@@ -85,17 +85,15 @@
   }
 
   &__slide-menu {
-    outline: 1px solid red;
     display: flex;
-    align-items: center;
-    // padding-bottom: 4px;
+    gap: 6px;
     list-style: none;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #7e7e82 #f8f8f8;
-    height: auto;
     margin-right: -16px;
     margin-bottom: 24px;
+    white-space: nowrap;
 
     @media (min-width: $tablet) {
       margin-right: -24px;
@@ -106,7 +104,7 @@
       overflow: visible;
       margin-right: 0;
       padding: 0;
-      // margin-bottom: 7px;
+      margin-bottom: 16px;
       flex-wrap: wrap;
     }
 
@@ -114,7 +112,7 @@
       content: '';
       position: absolute;
       right: 0;
-      height: 40px;
+      height: 42px;
       width: 24px;
       background: linear-gradient(
         270deg,
@@ -128,14 +126,17 @@
     }
   }
 
-  &__slide-menu-link {
+  &__slide-item {
+    padding: 9px 0px;
+  }
+
+  &__slide-link {
     text-decoration: none;
     border: 2px solid transparent;
     border-radius: 6px;
     background-color: #f8f8f8;
-    white-space: nowrap;
-    padding: 8px 26px;
-    font-family: 'TTLakesMedium';
+    padding: 8px 16px;
+    font-family: $medium;
     font-size: 16px;
     line-height: 24px;
     color: #7e7e82;
@@ -212,10 +213,14 @@
     box-sizing: content-box;
     margin-right: 8px;
     padding: 7px 8px 6px 8px;
+
+    &--active {
+      transform: rotate(0.5turn);
+    }
   }
 
   &__btn-read-more-text {
-    font-family: 'TTLakesMedium';
+    font-family: $medium;
     color: #1b1c21;
     font-size: 16px;
     line-height: 24px;

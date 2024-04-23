@@ -6,13 +6,14 @@
 
 @import 'blocks/html/html';
 
+@import 'blocks/aside/__elements/menu';
+@import 'blocks/aside/__elements/feedback';
+@import 'blocks/aside/__elements/call';
+
 @import 'blocks/header/header';
 @import 'blocks/header/__elements/nav';
 
 @import 'blocks/main/main-content';
-@import 'blocks/main/__elements/menu';
-@import 'blocks/main/__elements/feedback';
-@import 'blocks/main/__elements/call';
 @import 'blocks/main/__elements/services';
 @import 'blocks/main/__elements/brands';
 @import 'blocks/main/__elements/technique';

@@ -69,6 +69,7 @@
   line-height: 32px;
   letter-spacing: -0.6px;
   margin-bottom: 24px;
+  white-space: nowrap;
 
   &::before {
     content: '';

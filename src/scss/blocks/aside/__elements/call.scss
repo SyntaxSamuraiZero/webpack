@@ -1,15 +1,20 @@
 .call {
   position: fixed;
-  right: -320px;
-  transition: right 0.5s;
-  z-index: 2;
+  right: -100%;
+  transition: right 0.3s ease;
+  z-index: 4;
   overflow: hidden;
   scrollbar-width: thin;
   scrollbar-color: #7e7e82 white;
   padding: 24px 16px;
-  width: 320px;
+  width: 100%;
   height: 100%;
   background-color: #ffffff;
+
+  @media (min-width: $tablet) {
+    right: -320px;
+    width: 320px;
+  }
 
   @media (min-width: $desktop) {
     padding: 40px 32px;

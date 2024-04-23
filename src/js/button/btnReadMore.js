@@ -1,3 +1,20 @@
+let btnReadMore = document.querySelector('.services__btn-read-more')
+let btnImg = btnReadMore.querySelector('.services__btn-read-more-img')
+let btnText = btnReadMore.querySelector('.services__btn-read-more-text')
+let text = document.querySelector('.services__container-text')
+
+btnReadMore.addEventListener('click', function () {
+  if (btnText.textContent === 'Читать далее') {
+    btnImg.classList.add('services__btn-read-more-img--active')
+    text.classList.add('services__container-text--active')
+    btnText.textContent = 'Скрыть'
+  } else {
+    btnImg.classList.remove('services__btn-read-more-img--active')
+    text.classList.remove('services__container-text--active')
+    btnText.textContent = 'Читать далее'
+  }
+})
+
 let btnReadMoreBrands = document.querySelector('.brands__btn-read-more')
 let btnImgBrands = btnReadMoreBrands.querySelector('.brands__btn-read-more-img')
 let btnTextBrands = btnReadMoreBrands.querySelector(
