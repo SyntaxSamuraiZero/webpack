@@ -12,13 +12,3 @@ navBtnCall.addEventListener('click', function () {
 btnCallClose.addEventListener('click', function () {
   call.classList.remove('call--active')
 })
-
-document.addEventListener('click', function (event) {
-  if (
-    !call.contains(event.target) &&
-    !menuBtnCall.contains(event.target) &&
-    !navBtnCall.contains(event.target)
-  ) {
-    call.classList.remove('call--active')
-  }
-})

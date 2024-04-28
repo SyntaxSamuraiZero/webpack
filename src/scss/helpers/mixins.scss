@@ -1,8 +1,9 @@
 @mixin h2 {
   margin-right: -16px;
   margin-left: -16px;
-  border-top: 1px solid #d9fff5;
+  margin-bottom: 16px;
   padding: 16px;
+  border-top: 1px solid #d9fff5;
   background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
   font-family: $regular;
   color: #7e7e82;
@@ -60,6 +61,25 @@
     left: -72px;
     top: 36px;
   }
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: '';
+      cursor: auto;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(4px);
+    }
+
+    @media (min-width: $desktop) {
+      top: -36px;
+      right: -32px;
+      z-index: -1;
+    }
+  }
 }
 
 @mixin menu-title {
@@ -116,13 +136,13 @@
 
 @mixin btn-read-more {
   display: none;
-  cursor: pointer;
 
   @media (min-width: $tablet) {
     display: flex;
     margin-bottom: 32px;
     border: none;
     background-color: #f8f8f8;
+    cursor: pointer;
   }
 
   @media (min-width: $desktop) {

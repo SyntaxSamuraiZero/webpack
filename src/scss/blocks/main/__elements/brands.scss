@@ -1,16 +1,5 @@
 .brands {
-  overflow: hidden;
-  padding: 0 16px;
   margin-bottom: 24px;
-
-  @media (min-width: $tablet) {
-    padding: 0 24px;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 0 32px;
-  }
 
   @include pagination;
 
@@ -19,7 +8,6 @@
   }
 
   &__container {
-    margin-top: 16px;
     margin-bottom: 16px;
     width: 240px;
 

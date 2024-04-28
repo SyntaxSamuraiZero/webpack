@@ -1,13 +1,5 @@
 .services {
-  padding: 24px 16px;
-
-  @media (min-width: $tablet) {
-    padding: 24px 24px 32px 24px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 42px 32px;
-  }
+  margin-bottom: 24px;
 
   &__flex-container {
     display: flex;

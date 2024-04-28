@@ -1,11 +1,11 @@
 .footer {
   font-family: $medium;
-  color: #7e7e82;
+  color: $text-color-gray;
   line-height: 16px;
   text-align: center;
   padding: 16px;
-  border-top: 1px solid #d9fff5;
-  background-color: #f8f8f8;
+  border-top: 1px solid $color-decor;
+  background-color: $color-main;
 
   @media (min-width: $tablet) {
     padding: 24px;
@@ -17,8 +17,9 @@
 
   @media (min-width: $desktop) {
     padding: 32px;
-    margin-left: 320px;
-    width: calc(100% - 320px);
+    transform: translate(13.5%, 0);
+    width: 1120px;
+    margin: 0 auto;
   }
 
   &__copyright {

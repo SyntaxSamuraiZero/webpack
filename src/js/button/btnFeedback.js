@@ -12,13 +12,3 @@ navBtnFeedback.addEventListener('click', function () {
 btnFeedbackClose.addEventListener('click', function () {
   feedback.classList.remove('feedback--active')
 })
-
-document.addEventListener('click', function (event) {
-  if (
-    !feedback.contains(event.target) &&
-    !menuBtnFeedback.contains(event.target) &&
-    !navBtnFeedback.contains(event.target)
-  ) {
-    feedback.classList.remove('feedback--active')
-  }
-})

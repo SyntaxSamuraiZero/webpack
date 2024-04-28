@@ -8,9 +8,3 @@ btnBurger.addEventListener('click', function () {
 btnClose.addEventListener('click', function () {
   menu.classList.remove('menu--active')
 })
-
-document.addEventListener('click', function (event) {
-  if (!menu.contains(event.target) && !btnBurger.contains(event.target)) {
-    menu.classList.remove('menu--active')
-  }
-})
